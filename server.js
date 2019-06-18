@@ -11,9 +11,15 @@ app
     const server = express();
     
     // Add use case of clean urls
+    // server.get('/p/:id', (req, res) => {
+    //   const actualPage = '/post';
+    //   const queryParams = { title: req.params.id };
+    //   app.render(req, res, actualPage, queryParams);
+    // });
+
     server.get('/p/:id', (req, res) => {
       const actualPage = '/post';
-      const queryParams = { title: req.params.id };
+      const queryParams = { id: req.params.id };
       app.render(req, res, actualPage, queryParams);
     });
 
