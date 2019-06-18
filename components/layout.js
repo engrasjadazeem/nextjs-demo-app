@@ -13,4 +13,14 @@ const layout = props => (
   </div>
 )
 
-export default layout;
+const withLayout = Page => {
+  return () => (
+    <div style={layoutStyle}>
+      <Header />
+      <Page />
+    </div>
+  );
+};
+
+//export default layout;
+export default withLayout;
